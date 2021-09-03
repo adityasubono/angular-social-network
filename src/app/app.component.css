@@ -1,3 +1,4 @@
-p {
-  font-family: Lato;
+.main-background {
+  font-family: "SansSerif", "Barlow", monospace;
+  background-color: #953e46;
 }

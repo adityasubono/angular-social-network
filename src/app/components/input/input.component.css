@@ -1,0 +1,21 @@
+
+.input-find {
+  border: 1px;
+  border-color: #bb7172;
+  margin-top: 10px;
+  height: 40px;
+  width: 670px;
+  background-color: #f4e3cf;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #953e46;
+}
+
+.input-icon {
+  margin-top: 10px;
+  height: 40px;
+  color: #953e46;
+  background-color: #f4e3cf;
+}
+

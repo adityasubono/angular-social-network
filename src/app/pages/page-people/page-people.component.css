@@ -1,0 +1,23 @@
+.title-video {
+  position: absolute;
+  top: 340px;
+  font-weight: bold;
+}
+
+.section-title {
+  color: #f4e3cf;
+}
+
+.title {
+  color: #953e46;
+  font-weight: bold;
+}
+
+.sub-title {
+  color: #953e46;
+  font-weight: bold;
+}
+
+.overlay-title {
+  margin-top: 150px;
+}

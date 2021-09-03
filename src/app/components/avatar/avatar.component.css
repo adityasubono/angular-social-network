@@ -1,0 +1,27 @@
+.img-icon {
+  border-width: 1px;
+  border-color: #f4e3cf;
+}
+
+.avatar {
+  margin-top: 10px;
+  background-color: #f4e3cf;
+  vertical-align: middle;
+  width: 39px;
+  height: 39px;
+}
+
+.first-name {
+  color: #f4e3cf;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.last-name {
+  color: #f4e3cf;
+  position: relative;
+  top: -13px;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
