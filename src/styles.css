@@ -1,1 +1,36 @@
 /* Add application styles & imports to this file! */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.btn-primary {
+    background: #d83a56;
+    border: 1px solid #d83a56;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:disabled,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active {
+    background: darken(#d83a56, 5%);
+    border: 1px solid #d83a56;
+}
+.btn-primary-outline {
+    color: #d83a56;
+    background: white;
+    border: 1px solid #d83a56;
+}
+.btn-primary-outline:hover,
+.btn-primary-outline:focus,
+.btn-primary-outline:disabled,
+.btn-primary-outline:not(:disabled):not(.disabled).active,
+.btn-primary-outline:not(:disabled):not(.disabled):active {
+    background: darken(white, 5%);
+    color: #d83a56;
+    border: 1px solid #d83a56;
+    outline: none;
+}
+.btn-link-active.btn-primary {
+    background: none;
+    border: none;
+    color: #d83a56;
+}
+

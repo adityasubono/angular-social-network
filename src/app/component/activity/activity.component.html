@@ -1,0 +1,43 @@
+<div class="activity__wrapper d-flex">
+  <div class="p-2" style="flex:0.3">
+    <img src="{{ picture }}" class="w-100" style="border-radius:12px">
+  </div>
+  <div class=" p-2" style="flex:0.7">
+    <div>
+      <span class="fw-bold">{{ name }}</span>
+
+      <!-- BASED ON ACTION CODE -->
+      <span class="activity__action-code" *ngIf="actionCode == 'commented'" >
+      commented
+      </span>
+
+      <span class="activity__action-code" *ngIf="actionCode == 'new_video'" >
+      added a new video
+      </span>
+
+      <span class="activity__action-code" *ngIf="actionCode == 'shared_document'" >
+      shared a document
+      </span>
+
+      <span class="activity__action-code" *ngIf="actionCode == 'new_badge'" >
+      new badge
+      </span>
+
+      <span class="activity__action-code" *ngIf="actionCode == 'liked'" >
+      liked a video
+      </span>
+
+    </div>
+    <div class="activity__description">
+      {{ description }}
+    </div>
+    <div class="activity__timestamp">
+      <i class="fas fa-comments" *ngIf="actionCode == 'commented'"></i>
+      <i class="fas fa-video" *ngIf="actionCode == 'new_video'"></i>
+      <i class="fas fa-file-alt" *ngIf="actionCode == 'shared_document'"></i>
+      <i class="fas fa-certificate" *ngIf="actionCode == 'new_badge'"></i>
+      <i class="fas fa-heart" *ngIf="actionCode == 'liked'"></i>
+      {{ timestampHistory(timestamp) }}
+    </div>
+  </div>
+</div>

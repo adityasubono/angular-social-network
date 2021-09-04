@@ -1,0 +1,31 @@
+.channel__wrapper {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 18px;
+  position: relative;
+  cursor: pointer;
+}
+
+.channel__box-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px -25px 20px 0px #191919;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.channel__wrapper:hover > .channel__box-shadow {
+  background: #bcbcbc78;
+}
+
+.channel__title {
+  font-weight: 500;
+  color: white;
+  font-size: 16px;
+}

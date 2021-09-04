@@ -1,0 +1,31 @@
+.activity__wrapper {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.activity__wrapper:hover {
+  background: rgb(230, 230, 230);
+}
+
+.activity__action-code {
+  font-size: 14px;
+}
+
+.activity__description {
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-bottom: 4px;
+}
+
+.activity__timestamp {
+  font-size: 12px;
+}
+
+.activity__timestamp i {
+  margin-right: 4px;
+  color: #d83a56;
+}

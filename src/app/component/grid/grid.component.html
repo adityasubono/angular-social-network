@@ -1,0 +1,31 @@
+<div
+  class="videos__wrapper"
+  [ngStyle]="{ height: size == 'full' ? '275px' : '125px' }"
+>
+  <img src="{{ picture }}" class="videos__cover" />
+  <div
+    class="videos__box-shadow d-flex align-items-end"
+    [ngClass]="{ 'half':size == 'half' }"
+  >
+    <div class="w-100 p-2">
+      <div
+        class="videos__title"
+        *ngIf="title != null"
+        [ngStyle]="{ 'font-size': size == 'full' ? '24px' : '12px' }"
+      >
+        {{ title }}
+      </div>
+      <div class="d-flex w-100">
+        <span
+          class="videos__author flex-grow-1"
+          *ngIf="size == 'full' && sub != null"
+        >
+          {{ sub }}
+        </span>
+        <span class="videos__views" *ngIf="size == 'full' && view != null">
+          {{ view | number : '1.0-2' }} views
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

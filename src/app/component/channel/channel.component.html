@@ -1,0 +1,10 @@
+<div class="channel__wrapper" style="background-image: url( {{ picture }} ); " [ngStyle]="{ height: '125px' }">
+
+  <div class="channel__box-shadow d-flex align-items-end">
+    <div class="w-100 p-2">
+      <div class="channel__title" *ngIf="name != null">
+        {{ name }}
+      </div>
+    </div>
+  </div>
+</div>

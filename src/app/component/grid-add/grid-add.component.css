@@ -1,0 +1,16 @@
+.grid-add {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  border-radius: 12px;
+  justify-content: center;
+  color: #d83a56;
+  border: 2px solid #d83a56;
+  cursor: pointer;
+}
+.grid-add__content {
+  transition: 0.2s;
+}
+.grid-add__content:hover {
+  transform: scale(1.1);
+}
