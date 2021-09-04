@@ -1,6 +1,10 @@
 /* Add application styles & imports to this file! */
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+.body {
+    background-color: #f4e3cf;
+}
+
 .btn-primary {
     background: #d83a56;
     border: 1px solid #d83a56;

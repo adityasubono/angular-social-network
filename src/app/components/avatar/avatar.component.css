@@ -1,27 +1,21 @@
-.img-icon {
-  border-width: 1px;
-  border-color: #f4e3cf;
+.profile {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+  justify-content: flex-end;
+}
+.profile__picture {
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+}
+.profile__first-name {
+  font-size: 18px;
+  font-weight: bold;
 }
 
-.avatar {
-  margin-top: 10px;
-  background-color: #f4e3cf;
-  vertical-align: middle;
-  width: 39px;
-  height: 39px;
+.profile__last-name {
+  font-size: 12px;
 }
-
-.first-name {
-  color: #f4e3cf;
-  font-size: 20px;
-  margin-left: 5px;
-}
-
-.last-name {
-  color: #f4e3cf;
-  position: relative;
-  top: -13px;
-  font-size: 15px;
-  margin-left: 5px;
-}
-
