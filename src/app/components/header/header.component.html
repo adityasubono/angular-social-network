@@ -6,12 +6,35 @@
     </div>
   </div>
   <div class="col-md-6 d-flex align-items-center mb-2">
-    <app-input></app-input>
+    <div class="d-flex position-relative w-100">
+      <input
+              type="text"
+              class="form-control search-box"
+              style="padding-right:28px"
+              placeholder="find..."
+      />
+      <div
+              class="position-absolute"
+              style="right: 0px;height: 100%;display: flex;align-items: center;padding: 8px;"
+      >
+        <i class="fas fa-search" style="right:0px"></i>
+      </div>
+    </div>
   </div>
   <div class="col-md-3 d-flex align-items-center mb-2">
-   <app-button></app-button>
+    <button class="btn btn-primary px-3 h-100 me-4">
+      <i class="fas fa-upload"></i>
+      Upload
+    </button>
     <div class="d-flex profile">
-      <app-avatar></app-avatar>
+      <img
+              class="profile__picture"
+              src="https://thispersondoesnotexist.com/image"
+      />
+      <div>
+        <p class="m-0 profile__first-name">Waseem</p>
+        <p class="m-0 profile__last-name">Arshad</p>
+      </div>
     </div>
   </div>
 </div>
