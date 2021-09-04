@@ -1,59 +1,68 @@
-<div class="row mt-3">
-  <h5 class="section-title">Videos</h5>
-  <div class="col-md-8 mt">
-    <div class="card bg-dark text-white">
-      <img src="assets/images/improve-skill.jpg" class="card-img" alt="...">
-      <div class="card-img-overlay title-video bg-dark bg-opacity-25">
-        <h5 class="card-title title">How to improve your skill</h5>
-        <p class="card-text sub-title">Waseem Arshad</p>
-      </div>
+<div>
+    <div class="d-flex align-items-center mb-2">
+        <h3 class="flex-grow-1">People</h3>
+        <a
+                href="#"
+                class="m-0"
+                style="color:#d83a56; text-decoration:none;font-size:14px"
+        >View all</a>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card bg-dark text-white">
-      <img src="assets/images/improve-skill.jpg" class="card-img" alt="...">
-      <div class="card-img-overlay overlay-title bg-dark bg-opacity-25 d-flex">
-        <p class="card-title text-start me-5 title opacity-100">Michael Kenliht</p>
-        <p class="card-text text-end sub-title">15567 view</p>
-      </div>
-    </div>
+    <div class="row">
+        <div class="col-md-8 mb-4">
+            <ng-template [ngIf]="peoples != null && peoples[0] != null">
+                <app-grid
+                        [title]="peoples[0].name"
+                        [sub]="peoples[0].role"
+                        [view]="peoples[0].views"
+                        [picture]="peoples[0].profilePicture"
+                        [size]="'full'"
+                ></app-grid>
+            </ng-template>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <ng-template [ngIf]="peoples != null && peoples[1] != null">
+                        <app-grid
+                                [title]="peoples[1].name"
+                                [sub]="peoples[1].role"
+                                [view]="peoples[1].views"
+                                [picture]="peoples[1].profilePicture"
+                                [size]="isMobile ? 'full' : 'half'"
+                        ></app-grid>
+                    </ng-template>
+                </div>
+                <div class="col-md-12">
+                    <ng-template [ngIf]="peoples != null && peoples[2] != null">
+                        <app-grid
+                                [title]="peoples[2].name"
+                                [sub]="peoples[2].role"
+                                [view]="peoples[2].views"
+                                [picture]="peoples[2].profilePicture"
+                                [size]="isMobile ? 'full' : 'half'"
+                        ></app-grid>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        <ng-template ngFor let-people [ngForOf]="peoples" let-i="index">
+            <div *ngIf="i > 2" class="col-md-4 mb-4">
+                <app-grid
+                        [title]="people.name"
+                        [sub]="people.role"
+                        [view]="people.views"
+                        [picture]="people.profilePicture"
+                        [size]="isMobile ? 'full' : 'half'"
+                ></app-grid>
+            </div>
+        </ng-template>
 
-    <div class="card bg-dark text-white mt-3">
-      <img src="assets/images/improve-skill.jpg" class="card-img" alt="...">
-      <div class="card-img-overlay overlay-title d-flex bg-dark bg-opacity-25">
-        <p class="card-title text-start me-5 title">Michael Kenliht</p>
-        <p class="card-text text-end sub-title">15567 view</p>
-      </div>
+        <div class="col-md-4 mb-4">
+            <app-grid-add
+                    [icon]="'fa-briefcase'"
+                    [firstWord]="'Show'"
+                    [secondWord]="'Your work'"
+            ></app-grid-add>
+        </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
-    <div class="card bg-dark text-white mt-3">
-      <img src="assets/images/improve-skill.jpg" class="card-img" alt="...">
-      <div class="card-img-overlay overlay-title d-flex bg-dark bg-opacity-25">
-        <p class="card-title text-start me-5 title ">Michael Kenliht</p>
-        <p class="card-text text-end sub-title">15567 view</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card bg-dark text-white mt-3">
-      <img src="assets/images/improve-skill.jpg" class="card-img" alt="...">
-      <div class="card-img-overlay overlay-title d-flex bg-dark bg-opacity-25">
-        <p class="card-title text-start me-5 title ">Michael Kenliht</p>
-        <p class="card-text text-end sub-title">15567 view</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4">
-    <div class="card bg-dark text-white mt-3">
-      <img src="assets/images/improve-skill.jpg" class="card-img" alt="...">
-      <div class="card-img-overlay d-flex bg-dark bg-opacity-75 justify-content-center py-5">
-        <i class="fa fa-arrow-up me-3"></i>
-        <p class="card-title text-start me-5 title">Upload <br>Your Own Videos</p>
-      </div>
-    </div>
-  </div>
 </div>

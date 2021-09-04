@@ -3,4 +3,5 @@ export class Video {
   public author: string | undefined;
   public views: number| undefined;
   public thumbnail: string| undefined;
+  public size: any | undefined;
 }

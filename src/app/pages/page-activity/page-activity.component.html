@@ -1,0 +1,54 @@
+<div>
+    <div class="mb-4">
+        <div
+                class="d-flex align-items-center mb-2"
+                style="padding: 0px 0px;
+                border-bottom: 3px solid #bcbcbc;"
+        >
+            <h3 class="flex-grow-1">Activity</h3>
+            <a
+                    href="#"
+                    class="m-0"
+                    style="color:#d83a56;
+                    text-decoration:none;
+                    font-size:14px">View timeline</a>
+        </div>
+
+        <ng-template ngFor let-activity [ngForOf]="activites" let-i="index">
+            <app-activity
+                    [picture]="activity.picture"
+                    [name]="activity.name"
+                    [description]="activity.description"
+                    [actionCode]="activity.actionCode"
+                    [timestamp]="activity.timestamp"
+            >
+            </app-activity>
+        </ng-template>
+    </div>
+    <div class="mb-4">
+        <div
+                class="d-flex align-items-center mb-4"
+                style="padding: 0px 0px;
+        border-bottom: 3px solid #bcbcbc;"
+        >
+            <h3 class="flex-grow-1">Channels</h3>
+            <a
+                    href="#"
+                    class="m-0"
+                    style="color:#d83a56; text-decoration:none;font-size:14px"
+            >Browse all channels</a
+            >
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6" *ngFor="let channel of channels">
+                <app-channel
+                        [name]="channel.name"
+                        [picture]="channel.picture"
+                        [isSubscribed]="channel.isSubscribed"
+                >
+                </app-channel>
+            </div>
+        </div>
+    </div>
+</div>

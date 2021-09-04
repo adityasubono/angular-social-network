@@ -1,0 +1,10 @@
+<div class="menu d-flex mb-4">
+    <div
+            *ngFor="let menu of menus; let i = index"
+            class="d-flex align-items-center"
+    >
+        <a class="menu__a" href="{{menu.url}}">
+            {{ menu.display }}
+        </a>
+    </div>
+</div>

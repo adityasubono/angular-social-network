@@ -1,21 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import {Document} from "../../models/Document";
-import {DocumentService} from "../../services/document.service";
+import {Activite} from "../../models/Activite";
+import {Channel} from "../../models/Channel";
+import {ActivityService} from "../../services/activity.service";
+import {ChannelService} from "../../services/channel.service";
 
 @Component({
-  selector: 'app-page-document',
-  templateUrl: './page-document.component.html',
-  styleUrls: ['./page-document.component.css']
+  selector: 'app-page-activity',
+  templateUrl: './page-activity.component.html',
+  styleUrls: ['./page-activity.component.css']
 })
-export class PageDocumentComponent implements OnInit {
+export class PageActivityComponent implements OnInit {
 
-  documents: Document[] = [];
-  constructor(private documentService: DocumentService) { }
+  activites : Activite[] = []
+  channels : Channel[] = []
+
+  constructor(private activityService: ActivityService,
+              private channelService: ChannelService
+  ) { }
 
   isMobile = false;
   ngOnInit(): void {
-    this.getDocuments();
-
+    this.getActivities();
+    this.getChannels();
     if (
         /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(
             navigator.userAgent
@@ -28,10 +34,15 @@ export class PageDocumentComponent implements OnInit {
     }
   }
 
-  getDocuments() {
-    this.documentService.getDocuments().subscribe(data => {
-      this.documents = data;
+  getActivities() {
+    this.activityService.getActivities().subscribe(data => {
+      this.activites = data;
     });
   }
 
+  getChannels() {
+    this.channelService.getChannels().subscribe(data => {
+      this.channels = data;
+    });
+  }
 }

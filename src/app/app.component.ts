@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VERSION } from "@angular/cli";
+
 import { HomeService } from "./services/home.service";
 import {Document} from "./models/Document"
 import {Channel} from "./models/Channel";
@@ -12,50 +12,12 @@ import {Video} from "./models/Video";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
-  menus = [
-    {
-      display: 'Videos',
-      url: '#'
-    },
-    {
-      display: 'People',
-      url: '#'
-    },
-    {
-      display: 'Documents',
-      url: '#'
-    },
-    {
-      display: 'Events',
-      url: '#'
-    },
-    {
-      display: 'Communities',
-      url: '#'
-    },
-    {
-      display: 'Favorites',
-      url: '#'
-    },
-    {
-      display: 'Channels',
-      url: '#'
-    }
-  ];
 
-  videos : Video[] = []
-  peoples : People[] = []
-  activites : Activite[] = []
-  channels : Channel[] = []
-  documents: Document[] = [];
+
+
 
   constructor(private homeService: HomeService) {
-    this.getVideos();
-    this.getPeoples();
-    this.getDocuments();
-    this.getActivities();
-    this.getChannels();
+
   }
 
   isMobile = false;
@@ -70,35 +32,5 @@ export class AppComponent {
     ) {
       this.isMobile = true;
     }
-  }
-
-  getVideos() {
-    this.homeService.getVideos().subscribe(data => {
-      this.videos = data;
-    });
-  }
-
-  getPeoples() {
-    this.homeService.getPeoples().subscribe(data => {
-      this.peoples = data;
-    });
-  }
-
-  getDocuments() {
-    this.homeService.getDocuments().subscribe(data => {
-      this.documents = data;
-    });
-  }
-
-  getActivities() {
-    this.homeService.getActivities().subscribe(data => {
-      this.activites = data;
-    });
-  }
-
-  getChannels() {
-    this.homeService.getChannels().subscribe(data => {
-      this.channels = data;
-    });
   }
 }
