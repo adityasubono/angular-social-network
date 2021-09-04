@@ -1,12 +1,28 @@
-<div class="menu d-flex mb-4 border-danger border-2 border-bottom border-top">
-    <div
-            *ngFor="let menu of menus; let i = index"
-            class="d-flex align-items-center"
-    >
-        <a class="menu__a" href="{{menu.url}}">
-            {{ menu.display }}
-        </a>
-        <span class="div-menu mx-3">/</span>
-    </div>
-</div>
+<nav
+        class="navbar navbar-expand-lg navbar-dark border-danger border-2 border-bottom border-top nav-color"
+>
+    <a class="navbar-toggler menu__a" href="#">
+        <div class="logo">
+            <span class="logo__first-word">Click</span>
+            <span class="logo__second-word">Menu</span>
+        </div>
+    </a>
 
+    <button class="navbar-toggler bg-dark" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav mr-auto">
+            <div
+                    *ngFor="let menu of menus; let i = index"
+                    class="d-flex align-items-center"
+            >
+                <a class="menu__a" href="{{menu.url}}">
+                    {{ menu.display }}
+                </a>
+                <span class="div-menu mx-3">/</span>
+            </div>
+        </ul>
+    </div>
+</nav>

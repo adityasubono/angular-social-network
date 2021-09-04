@@ -9,3 +9,30 @@
 .div-menu {
     color: #d83a56;
 }
+
+.logo {
+    font-size: 32px;
+}
+.logo .logo__first-word {
+    color: #707070;
+}
+.logo .logo__second-word {
+    color: #d83a56;
+}
+.menu__a:hover {
+    background-color: #d83a56;
+    color: #f4e3cf;
+    border-radius: 20px;
+}
+
+.logo .logo__first-word:hover {
+    background-color: #d83a56;
+    color: #f4e3cf;
+    border-radius: 20px;
+}
+
+.logo .logo__second-word:hover {
+    background-color: #d83a56;
+    color: #f4e3cf;
+    border-radius: 20px;
+}
